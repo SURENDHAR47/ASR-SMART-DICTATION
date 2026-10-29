@@ -1,0 +1,11 @@
+{
+  "name": "asr-smart-dictation",
+  "version": "1.0.0",
+  "description": "Browser-based ASR Smart Dictation and Voice Style System",
+  "scripts": {
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0"
+  }
+}

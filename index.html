@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASR Smart Dictation &amp; Voice Style System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <h1>ASR Smart Dictation System</h1>
+    <p class="subtitle">Speech-to-Text, Smart Punctuation, Text-to-Speech &amp; Character Voice Styles</p>
+
+    <div class="section">
+      <h2>1. Speech &rarr; Text (ASR)</h2>
+      <div class="row">
+        <button id="startBtn" class="primary">Start Speaking</button>
+        <button id="stopBtn" class="danger" disabled>Stop</button>
+      </div>
+      <label class="check-row">
+        <input type="checkbox" id="punctCheck" checked>
+        Auto-convert spoken punctuation ("period", "comma", "question mark")
+      </label>
+      <p id="status" role="status" aria-live="polite">Not listening</p>
+    </div>
+
+    <div class="section">
+      <h2>2. Shared Text Box</h2>
+      <textarea id="textBox" rows="5" placeholder="Speak into the microphone or type your text here..."></textarea>
+      <div class="toolbar">
+        <span id="wordCount">0 words | 0 chars</span>
+        <div class="tool-btns">
+          <button id="copyBtn" class="small">Copy</button>
+          <button id="downloadBtn" class="small">Download .txt</button>
+          <button id="clearBtn" class="small">Clear</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>3. Text &rarr; Speech (Normal Voice)</h2>
+      <button id="speakNormalBtn" class="secondary">Speak Normally</button>
+    </div>
+
+    <div class="section">
+      <h2>4. Speak in Character Voice Style</h2>
+      <div class="row">
+        <select id="styleSelect">
+          <option value="">-- Choose a voice style --</option>
+          <option value="robot">Robot Assistant (beep)</option>
+          <option value="chipmunk">Chipmunk Cartoon (squeak)</option>
+          <option value="narrator">Deep Narrator (hmm)</option>
+          <option value="announcer">Sports Announcer (boom)</option>
+          <option value="whisper">Mystery Whisper (shhh)</option>
+        </select>
+        <button id="speakStyleBtn" class="accent">Speak in Style</button>
+      </div>
+      <label class="check-row">
+        <input type="checkbox" id="keepWords">
+        Keep my words (change only the voice pitch and rate)
+      </label>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
